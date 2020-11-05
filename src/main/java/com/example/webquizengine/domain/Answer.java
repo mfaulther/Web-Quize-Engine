@@ -1,4 +1,4 @@
-package com.example.webquizengine;
+package com.example.webquizengine.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
