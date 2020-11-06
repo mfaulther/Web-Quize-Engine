@@ -17,12 +17,10 @@ public class RegisterService {
     @Autowired
     PasswordEncoder encoder;
 
-    public void register(Map<String, String> user) {
-
-        User newUser = new User();
-        newUser.setUsername(user.get("username"));
-        newUser.setPassword(encoder.encode(user.get("password")));
-        userRepo.save(newUser);
+    public void register(User user) {
+        String encodedPassword = encoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
+        userRepo.save(user);
     }
 
 

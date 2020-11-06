@@ -20,7 +20,7 @@ public class RegisterController {
     RegisterService registerService;
 
     @PostMapping
-    public String register(@RequestBody Map<String, String> user) {
+    public String register(@RequestBody User user) {
         registerService.register(user);
         return "User successfully saved :)";
     }
